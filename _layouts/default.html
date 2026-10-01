@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% if page.title %}
+            {{ page.title }} · {{ site.title }}
+        {% else %}
+            {{ site.title }}
+        {% endif %}
+    </title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="/">Akobir Kamolov</a>
+
+        <div class="nav-links">
+            <a href="/research">Research</a>
+            <a href="/projects">Projects</a>
+            <a href="/notes">Notes</a>
+            <a href="/cv">CV</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+    {{ content }}
+</main>
+
+<footer>
+    <p>
+        © {{ "now" | date: "%Y" }} Akobir Kamolov
+    </p>
+</footer>
+
+</body>
+</html>
